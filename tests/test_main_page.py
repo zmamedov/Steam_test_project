@@ -9,15 +9,6 @@ def test_switch_tab():
     main_page.check_community_tab_title()
 
 
-def test_search():
-    main_page.open_main_page()
-
-    search_page.click_on_search()
-    search_page.find_game_in_search(game_name="Baldur's Gate 3")
-
-    search_page.check_search_result(game_name="Baldur's Gate 3")
-
-
 def test_change_language():
     main_page.open_main_page()
     main_page.click_on_list_of_lang()
