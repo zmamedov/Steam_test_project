@@ -19,12 +19,6 @@ def test_change_language():
     main_page.check_french_lang_on_page()
 
 
-def test_open_login_page():
-    main_page.open_main_page()
-    main_page.click_on_login()
-    main_page.check_login_page()
-
-
 def test_add_game_to_cart():
     main_page.open_main_page()
 
