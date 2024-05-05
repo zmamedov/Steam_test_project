@@ -3,13 +3,13 @@ from selene import browser, have
 
 class CartPage:
     def add_game_to_cart(self):
-        browser.element('#btn_add_to_cart_478012').click()
+        browser.element('.btn_addtocart').click()
 
     def move_to_cart(self):
-        browser.all('[type="button"]').element_by(have.text('Открыть корзину'))
+        browser.all('[type="button"]').element_by(have.text('Открыть корзину')).click()
 
     def continue_buying(self):
-        browser.all('[type="button"]').element_by(have.text('Продолжить покупки'))
+        browser.all('[type="button"]').element_by(have.text('Продолжить покупки')).click()
 
     def remove_game_from_cart(self):
         browser.element('._33j4SwfO2YH9eI6qV9BKaL').click()

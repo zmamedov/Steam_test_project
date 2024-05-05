@@ -37,7 +37,7 @@ def test_clear_cart():
     cart_page.add_game_to_cart()
     cart_page.continue_buying()
     search_page.click_on_search()
-    search_page.find_game_in_search(game_name="GreedFall")
+    search_page.find_game_in_search(game_name="Manor Lords")
     search_page.click_on_first_game_in_search_row()
     cart_page.add_game_to_cart()
     cart_page.move_to_cart()
