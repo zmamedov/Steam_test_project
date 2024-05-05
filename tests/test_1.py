@@ -1,63 +1,69 @@
-from selene import browser, have
+from qa_guru_diplom_ui.pages.main_page import main_page
+from qa_guru_diplom_ui.pages.search_page import search_page
 
 
 def test_switch_tab():
-    browser.open('/')
-    browser.element('.responsive_page_content [data-tooltip-content=".submenu_Community"]').click()
+    main_page.open_main_page()
+    main_page.switch_navigation_tab(tab_name='СООБЩЕСТВО')
 
-    browser.element('.community_home_title').should(have.exact_text('Активность сообщества'))
+    main_page.check_community_tab_title()
 
 
 def test_search():
-    browser.open('/')
+    main_page.open_main_page()
 
-    browser.element('#store_nav_search_term').click()
-    browser.element('#store_nav_search_term').type("Baldur's Gate 3").press_enter()
-    browser.element('.title').should(have.exact_text("Baldur's Gate 3"))
+    search_page.click_on_search()
+    search_page.find_game_in_search(game_name="Baldur's Gate 3")
+
+    search_page.check_search_result(game_name="Baldur's Gate 3")
 
 
 def test_change_language():
-    browser.open('/')
-    browser.element('#language_pulldown').click()
-    browser.element('[onclick*="french"]').click()
-    browser.element('#language_pulldown').should(have.exact_text('langue'))
+    main_page.open_main_page()
+    main_page.click_on_list_of_lang()
+    main_page.choose_lang()
+    main_page.check_lang_on_page()
 
 
 def test_open_login_page():
-    browser.open('/')
-    browser.element('[class="global_action_link"]').click()
-    browser.element('._39uMKt8ePvr2Tw7x1YxJh3').should(have.exact_text('Войти'))
-
+    main_page.open_main_page()
+    main_page.click_on_login()
+    main_page.check_login_page()
 
 
 def test_add_game_to_cart():
-    browser.open('/')
-    browser.element('#store_nav_search_term').click()
-    browser.element('#store_nav_search_term').type("Baldur's Gate 3").press_enter()
-    browser.all('.search_result_row').first.click()
-    browser.element('.btn_addtocart').click()
-    browser.all('[type="button"]').second.click()
-    browser.element('.pVXX8Pzc4JbT40TP4RwRG').should(have.exact_text("Baldur's Gate 3"))
+    main_page.open_main_page()
 
+    search_page.click_on_search()
+    search_page.find_game_in_search(game_name="Baldur's Gate 3")
+    search_page.click_on_first_game_in_search_row()
+    main_page.add_game_to_cart()
+    main_page.open_cart()
 
+    main_page.check_game_in_cart()
 
 
 def test_remove_game_from_cart():
-    browser.open('/')
-    browser.element('#store_nav_search_term').click()
-    browser.element('#store_nav_search_term').type("Baldur's Gate 3").press_enter()
-    browser.all('.search_result_row').first.click()
-    browser.element('.btn_addtocart').click()
-    browser.all('[type="button"]').second.click()
-    browser.element('._33j4SwfO2YH9eI6qV9BKaL').click()
-    browser.all('._17GFdSD2pc0BquZk5cejg8>div').first.should(have.exact_text("Ваша корзина пуста."))
+    main_page.open_main_page()
+
+    search_page.click_on_search()
+    search_page.find_game_in_search(game_name="Baldur's Gate 3")
+    search_page.click_on_first_game_in_search_row()
+    main_page.add_game_to_cart()
+    main_page.open_cart()
+    main_page.remove_game_from_cart()
+
+    main_page.check_empty_cart()
+
 
 def test_clear_cart():
-    browser.open('/')
-    browser.element('#store_nav_search_term').click()
-    browser.element('#store_nav_search_term').type("Baldur's Gate 3").press_enter()
-    browser.all('.search_result_row').first.click()
-    browser.element('.btn_addtocart').click()
-    browser.all('[type="button"]').second.click()
-    browser.element('._12zYFuKO2U-1QfeVxlGfwF').click()
-    browser.all('._17GFdSD2pc0BquZk5cejg8>div').first.should(have.exact_text("Ваша корзина пуста."))
+    main_page.open_main_page()
+
+    search_page.click_on_search()
+    search_page.find_game_in_search(game_name="Baldur's Gate 3")
+    search_page.click_on_first_game_in_search_row()
+    main_page.add_game_to_cart()
+    main_page.open_cart()
+
+    main_page.clear_cart()
+    main_page.check_empty_cart()
