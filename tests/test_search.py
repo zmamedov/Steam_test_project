@@ -1,8 +1,19 @@
+import allure
+from allure_commons.types import Severity
+
 from qa_guru_diplom_ui.pages.main_page import main_page
 from qa_guru_diplom_ui.pages.search_page import search_page
 
 
+@allure.feature('Search')
+@allure.epic('Search')
+@allure.link('https://store.steampowered.com/', name='Steam')
 class TestSearch:
+    @allure.title('Find game via search field')
+    @allure.story('Search page')
+    @allure.tag('web')
+    @allure.severity(Severity.CRITICAL)
+    @allure.label('owner', 'zmamedov')
     def test_search_field(self):
         main_page.open_main_page()
 

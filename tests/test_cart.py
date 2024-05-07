@@ -1,9 +1,20 @@
+import allure
+from allure_commons.types import Severity
+
 from qa_guru_diplom_ui.pages.main_page import main_page
 from qa_guru_diplom_ui.pages.search_page import search_page
 from qa_guru_diplom_ui.pages.cart_page import cart_page
 
 
+@allure.feature('Cart')
+@allure.epic('Cart')
+@allure.link('https://store.steampowered.com/', name='Steam')
 class TestCart:
+    @allure.title('Add game to the cart')
+    @allure.story('Add game')
+    @allure.tag('web')
+    @allure.severity(Severity.CRITICAL)
+    @allure.label('owner', 'zmamedov')
     def test_add_game_to_cart(self):
         main_page.open_main_page()
 
@@ -15,6 +26,11 @@ class TestCart:
 
         cart_page.check_game_in_cart(game_name="Baldur's Gate 3")
 
+    @allure.title('Remove game from the cart')
+    @allure.story('Remove game')
+    @allure.tag('web')
+    @allure.severity(Severity.CRITICAL)
+    @allure.label('owner', 'zmamedov')
     def test_remove_game_from_cart(self):
         main_page.open_main_page()
 
@@ -27,6 +43,11 @@ class TestCart:
 
         cart_page.check_empty_cart()
 
+    @allure.title('Full clear of the cart')
+    @allure.story('Clear cart')
+    @allure.tag('web')
+    @allure.severity(Severity.CRITICAL)
+    @allure.label('owner', 'zmamedov')
     def test_clear_cart(self):
         main_page.open_main_page()
 
