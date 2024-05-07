@@ -21,7 +21,7 @@ class MainPage:
 
     def check_community_tab_title(self):
         with allure.step('Проверить заголовок вкладки "Community"'):
-            browser.element('.community_home_title').should(have.exact_text('Активность сообщества'))
+            browser.element('.community_home_title').should(have.exact_text('Community Activity'))
 
     def check_french_lang_on_page(self):
         with allure.step('Проверить, что на странице установлен французский язык.'):

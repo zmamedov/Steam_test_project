@@ -17,7 +17,7 @@ class TestMainPage:
     def test_switch_tab(self):
         main_page.open_main_page()
 
-        main_page.switch_navigation_tab(tab_name='СООБЩЕСТВО')
+        main_page.switch_navigation_tab(tab_name='COMMUNITY')
 
         main_page.check_community_tab_title()
 

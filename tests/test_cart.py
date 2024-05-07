@@ -19,12 +19,12 @@ class TestCart:
         main_page.open_main_page()
 
         search_page.click_on_search()
-        search_page.find_game_in_search(game_name="Baldur's Gate 3")
+        search_page.find_game_in_search(game_name="Manor Lords")
         search_page.click_on_first_game_in_search_row()
         cart_page.add_game_to_cart()
         cart_page.move_to_cart()
 
-        cart_page.check_game_in_cart(game_name="Baldur's Gate 3")
+        cart_page.check_game_in_cart(game_name="Manor Lords")
 
     @allure.title('Remove game from the cart')
     @allure.story('Remove game')
@@ -35,7 +35,7 @@ class TestCart:
         main_page.open_main_page()
 
         search_page.click_on_search()
-        search_page.find_game_in_search(game_name="Baldur's Gate 3")
+        search_page.find_game_in_search(game_name="Manor Lords")
         search_page.click_on_first_game_in_search_row()
         cart_page.add_game_to_cart()
         cart_page.move_to_cart()
@@ -52,12 +52,12 @@ class TestCart:
         main_page.open_main_page()
 
         search_page.click_on_search()
-        search_page.find_game_in_search(game_name="Baldur's Gate 3")
+        search_page.find_game_in_search(game_name="Manor Lords")
         search_page.click_on_first_game_in_search_row()
         cart_page.add_game_to_cart()
         cart_page.continue_buying()
         search_page.click_on_search()
-        search_page.find_game_in_search(game_name="Manor Lords")
+        search_page.find_game_in_search(game_name="Europa Universalis IV")
         search_page.click_on_first_game_in_search_row()
         cart_page.add_game_to_cart()
         cart_page.move_to_cart()

@@ -9,11 +9,11 @@ class CartPage:
 
     def move_to_cart(self):
         with allure.step('Перейти в корзину.'):
-            browser.all('[type="button"]').element_by(have.text('Открыть корзину')).click()
+            browser.all('[type="button"]').element_by(have.text('View My Cart')).click()
 
     def continue_buying(self):
         with allure.step('Продолжить покупки.'):
-            browser.all('[type="button"]').element_by(have.text('Продолжить покупки')).click()
+            browser.all('[type="button"]').element_by(have.text('Continue Shopping')).click()
 
     def remove_game_from_cart(self):
         with allure.step('Удалить игру из корзины.'):
@@ -29,7 +29,7 @@ class CartPage:
 
     def check_empty_cart(self):
         with allure.step('Проверить, что корзина пустая.'):
-            browser.all('._17GFdSD2pc0BquZk5cejg8>div').first.should(have.exact_text("Ваша корзина пуста."))
+            browser.all('._17GFdSD2pc0BquZk5cejg8>div').first.should(have.exact_text("Your cart is empty."))
 
 
 cart_page = CartPage()
