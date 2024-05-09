@@ -1,8 +1,8 @@
 import allure
 from allure_commons.types import Severity
 
-from qa_guru_diplom_ui.pages.main_page import main_page
-from qa_guru_diplom_ui.pages.login_page import login_page
+from steam_test_project.pages.main_page import main_page
+from steam_test_project.pages.login_page import login_page
 
 
 @allure.feature('Login page')

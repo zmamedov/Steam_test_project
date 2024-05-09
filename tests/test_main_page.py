@@ -1,7 +1,7 @@
 import allure
 from allure_commons.types import Severity
 
-from qa_guru_diplom_ui.pages.main_page import main_page
+from steam_test_project.pages.main_page import main_page
 
 
 @allure.feature('Elements on main Page')
