@@ -4,13 +4,13 @@ from allure_commons.types import Severity
 from steam_test_project.pages.main_page import main_page
 
 
-@allure.feature('Elements on main Page')
+@allure.feature('Elements on main page')
 @allure.epic('Main page')
 @allure.link('https://store.steampowered.com/', name='Steam')
 class TestMainPage:
 
     @allure.title('Switch on tab "Community"')
-    @allure.story('Main page')
+    @allure.story('Tabs')
     @allure.tag('web')
     @allure.severity(Severity.CRITICAL)
     @allure.label('owner', 'zmamedov')
@@ -21,8 +21,8 @@ class TestMainPage:
 
         main_page.check_community_tab_title()
 
-    @allure.title('Change language in main page on French')
-    @allure.story('Main page')
+    @allure.title('Change the language on the main page to French')
+    @allure.story('Global actions')
     @allure.tag('web')
     @allure.severity(Severity.NORMAL)
     @allure.label('owner', 'zmamedov')

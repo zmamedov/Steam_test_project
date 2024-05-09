@@ -5,12 +5,11 @@ from steam_test_project.pages.main_page import main_page
 from steam_test_project.pages.search_page import search_page
 
 
-@allure.feature('Search')
 @allure.epic('Search')
+@allure.feature('Search field')
 @allure.link('https://store.steampowered.com/', name='Steam')
 class TestSearch:
     @allure.title('Find game via search field')
-    @allure.story('Search page')
     @allure.tag('web')
     @allure.severity(Severity.CRITICAL)
     @allure.label('owner', 'zmamedov')

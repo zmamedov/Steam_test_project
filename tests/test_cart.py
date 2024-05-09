@@ -6,8 +6,8 @@ from steam_test_project.pages.search_page import search_page
 from steam_test_project.pages.cart_page import cart_page
 
 
-@allure.feature('Cart')
 @allure.epic('Cart')
+@allure.feature('Products in cart')
 @allure.link('https://store.steampowered.com/', name='Steam')
 class TestCart:
     @allure.title('Add game to the cart')

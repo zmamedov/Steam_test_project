@@ -16,7 +16,7 @@ class SearchPage:
             browser.all('.search_result_row').first.click()
 
     def check_search_result(self, game_name):
-        with allure.step(f'Проверить, что была найдена игра "{game_name}"'):
+        with allure.step(f'Проверить, что была найдена игра "{game_name}".'):
             browser.element('.title').should(have.exact_text(game_name))
 
 

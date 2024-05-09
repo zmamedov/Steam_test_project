@@ -16,11 +16,11 @@ class MainPage:
             browser.element('#language_pulldown').click()
 
     def choose_lang(self, lang):
-        with allure.step('Выбрать язык.'):
+        with allure.step('Выбрать французский язык.'):
             browser.element(f'[onclick*="{lang}"]').click()
 
     def check_community_tab_title(self):
-        with allure.step('Проверить заголовок вкладки "Community"'):
+        with allure.step('Проверить заголовок вкладки "Community Activity".'):
             browser.element('.community_home_title').should(have.exact_text('Community Activity'))
 
     def check_french_lang_on_page(self):
