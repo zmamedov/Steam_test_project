@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 from selene import browser
 
-from steam_test_project.utils import attach
+from steam_ui_test_project.utils import attach
 
 
 @pytest.fixture(scope="session", autouse=True)

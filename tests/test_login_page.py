@@ -1,8 +1,8 @@
 import allure
 from allure_commons.types import Severity
 
-from steam_test_project.pages.main_page import main_page
-from steam_test_project.pages.login_page import login_page
+from steam_ui_test_project.pages.main_page import main_page
+from steam_ui_test_project.pages.login_page import login_page
 
 
 @allure.epic('Login page')
