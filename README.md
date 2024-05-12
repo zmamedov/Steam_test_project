@@ -15,7 +15,7 @@
 ---
 
 ### Используемые инструменты
-<img title="Python" src="pictures/icons/python.svg" height="40" width="40"/> <img title="Pytest" src="pictures/icons/pytest.svg" height="40" width="40"/> <img title="Allure Report" src="pictures/icons/allure_report.png" height="40" width="40"/> <img title="GitHub" src="pictures/icons/github.svg" height="40" width="40"/> <img title="Selenoid" src="pictures/icons/selenoid.png" height="40" width="40"/> <img title="Selene" src="pictures/icons/selene.png" height="40" width="40"/> <img title="Pycharm" src="pictures/icons/pycharm-original.svg" height="40" width="40"/> <img title="Telegram" src="pictures/icons/telegram.png" height="40" width="40"/> <img title="Jenkins" src="pictures/icons/jenkins-original.svg" height="40" width="40"/>
+<img title="Python" src="pictures/icons/python.svg" height="40" width="40"/> <img title="Pytest" src="pictures/icons/pytest.svg" height="40" width="40"/> <img title="Allure Report" src="pictures/icons/allure_report.png" height="40" width="40"/> <img title="GitHub" src="pictures/icons/github.svg" height="40" width="40"/> <img title="Selenoid" src="pictures/icons/selenoid.png" height="40" width="40"/> <img title="Selene" src="pictures/icons/selene.png" height="40" width="40"/> <img title="Pycharm" src="pictures/icons/pycharm-original.svg" height="40" width="40"/> <img title="Telegram" src="pictures/icons/telegram.png" height="40" width="40"/> <img title="Jenkins" src="pictures/icons/jenkins-original.svg" height="40" width="40"/> <img title="Allure TestOps" src="pictures/icons/allure_testops.svg" height="40" width="40"/>
 
 ---
 
@@ -33,7 +33,26 @@
 
 ### Allure отчет
 
+#### Общие результаты
 ![allure_report main page](pictures/allure_report_main_page.png)
+
+#### Результаты прохождения тестов
+![allure_report suites](pictures/allure_report_suites.png)
+
+#### Графики
+![allure_report graph_1](pictures/allure_report_graph_1.png)
+![allure_report graph_2](pictures/allure_report_graph_2.png)
+
+---
+
+### Интеграция с Allure TestOps
+> [Дашборд с общими результатами](https://allure.autotests.cloud/project/4223/dashboards)
+
+![allure_testops dashboard](pictures/allure_testops_dashboard.png)
+
+> [Тест-кейсы](https://allure.autotests.cloud/project/4223/dashboards)
+
+![allure_testops test_cases](pictures/allure_testops_test_cases.png)
 
 ---
 
