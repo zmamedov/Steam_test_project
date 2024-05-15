@@ -56,6 +56,13 @@
 
 ---
 
+### Интеграция с Jira
+> [Задача в Jira](https://jira.autotests.cloud/browse/HOMEWORK-1234)
+ 
+![jira task](pictures/jira_task.png)
+
+---
+
 ### Уведомления в Телеграм
 
 ![telegram_notification](pictures/tg_notification.png)
